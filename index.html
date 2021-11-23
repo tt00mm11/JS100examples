@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+// 最大と最小
+// 5 個の数字 n_1, n_2, n_3, n_4, n_5 が半角スペース区切りで与えられます．
+// それらの数字の最大の数字，最小の数字を半角スペース区切りで出力するgetMaxAndMin()関数を作成してください．
+// 例えば
+// 9 12 3 6 10
+// と入力された場合
+// 12 3
+// と出力してください．
+function getMaxAndMin(s) {
+  const num = s.split("");
+  let max = Math.max
+}
+
+console.log(getMaxAndMin("9 12 3 6 10")); // 12 3
+console.log(getMaxAndMin("1 1 2 2 3")); // 3 1
+console.log(getMaxAndMin("5 9 -1 10 2")); // 10 -1
+
+
+// N 文字目まで出力
+// 半角アルファベットで構成された文字列sと正の整数n入力されます．
+// 1 文字目からn文字目までを出力するgetOneToN()関数を作成してください．
+// 例えば
+// abcdefgと4
+// と入力された場合
+// abcd
+// と出力して下さい．
+// function getOneToN(s, n) {
+//   let i = 0;//変数letに0を代入
+//   const alp = [];//答えの場所
+//   const getOneToN = s.split("");//中に入れる答え
+//   for(i = 0; i < n; i++){//n番目までiを足して繰り返す
+//     alp.push(getOneToN[i]);//n番目までのiをpushする
+//   }
+//   return alp.join("");//でた文字を””に表示する
+// };
+
+// console.log(getOneToN("aabbccdd", 5)); // aabbc
+// console.log(getOneToN("gsacademyfukuoka", 9)); // gsacademy
+
+
+
+// カウントダウン
+// 正整数nが入力されるので，nから 1 まで 1 ずつカウントダウンするcountDown()関数を作成してください．
+// 例えば
+// 3
+// と入力された場合
+// 3 2 1
+// と出力してください．
+// function countDown(n) {
+//   let i = 0;//iを定義
+//   const num = [];//場所確保
+//   for(i = 0; i < n; i++){//iをnの数まで一回づつ増やしていく
+//    num.push(n - i);//出す時にnから１ずつ引いていく
+//   }
+//   return num.join(" ");//追加
+// };
+
+// console.log(countDown(3)); // 3 2 1
+// console.log(countDown(10)); // 10 9 8 7 6 5 4 3 2 1
+
+
+// 掛け算のリスト
+// 正の整数 1 から 9 に整数 n をそれぞれを掛けた数を半角スペース区切りで出力する関数createList()関数を作成してください．
+// 例えば n=2 の場合は
+// 2 4 6 8 10 12 14 16 18
+// となります．
+// function createList(n) {
+// let i = 1;//1をiに代入
+// const num= [];//num場所確保
+// for(i = 1; i < 9; i++){//iを9まで１ずつ＋
+//  num.push(n * i);//nにiを乗算してpushで配列を増やしていく
+// };
+//  return (num.join(" "));//joinでnumの場所に加えていく
+// };
+
+// console.log(createList(2)); // 2 4 6 8 10 12 14 16 18
+// console.log(createList(3)); // 3 6 9 12 15 18 21 24 27
+// console.log(createList(5)); // 5 10 15 20 25 30 35 40 45
+
+
+// 小文字を大文字に
+// 半角アルファベットの小文字で構成された長さnの文字列sが与えられます．
+
+// 文字列sを大文字に変換して出力するconvertToUppercase()関数を作成してください．
+// function convertToUppercase(s) {
+//   const text = s;//textにsを代入する（定義）
+//   return s.toUpperCase();//戻り値でsを大文字にする関数（toUpperCase）を使用
+// };
+
+// console.log(convertToUppercase("gsacademy")); // GSACADEMY
+// console.log(convertToUppercase("abcdefghijklmnopqrstuvwxyz")); // ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+
+// 割り算
+// 整数mとnを入力し，mをnで割り算した商と余りを半角スペース区切りの文字列で出力するgetQuotientAndSurplus()関数を作成してください．
+// function getQuotientAndSurplus(m, n) {
+// const num = Math.floor(m / n);//小数点なしの割り算
+// const oth = (m % n);//余りの計算
+// return (`${num} ${oth}`);//表示
+// };
+// console.log(getQuotientAndSurplus(10, 3)); // 3 1
+// console.log(getQuotientAndSurplus(12, 14)); // 0 12
+
+
+// 絶対値
+// -100から100までの整数nが与えられるので，絶対値を出力するgetAbs()関数を作成してください．
+// function getAbs(n) {
+//   return Math.abs(n);
+// };
+
+// console.log(getAbs(-10)); // 10
+// console.log(getAbs(15)); // 15
+// console.log(getAbs(0)); // 0
+
+
+// 何番目？
+// 以下のような A〜Z (半角英字大文字) の中から 1 文字入力されます．
+// ABCDEFGHIJKLMNOPQRSTUVWXYZ A を 1 番目としてアルファベット順で何番目かを出力するjudgeTh()関数を作成してください．
+// function judgeTh(c) {
+// const az = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N", "O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+//   return az.indexOf(c) + 1;
+// };
+// console.log(judgeTh("C")); // 3
+// console.log(judgeTh("X")); // 24
+
+// 西暦の計算
+// 2 つの西暦aとbを入力し，aからbが何年間あるか出力するcalculateYears()関数を作成してください（a < bとする）．
+// function calculateYears(a, b) {
+//  return b - a;
+// };
+// console.log(calculateYears(1990, 2014)); // 24
+// console.log(calculateYears(1999, 2000)); // 1
+// console.log(calculateYears(794, 1192)); // 398
+
+
+// 奇数か偶数か
+// 正の整数nが入力されるので，n奇数ならばodd偶数ならばevenと出力するoddOrEven()関数を作成してください．
+// function oddOrEven(n) {
+//  if(n % 2 === 0){
+//    return "even";
+//  }else{
+//    return "odd";
+//  }};
+// console.log(oddOrEven(4)); // even
+// console.log(oddOrEven(5)); // odd
+// console.log(oddOrEven(2)); // even
+
+
+//単位の計算
+// 距離nとその単位sが入力されるので，すべての距離をmmに換算し数値で出力するconvertToMm()関数を作成してください．
+
+// 入力される距離の単位は km, m, cm の 3 種類で，それぞれ以下のように換算出来ます．
+
+// function convertToMm(n,s) {
+//  if (s === "km"){
+//    return n * 1000000;
+//  }else if(s === "m"){
+//    return n * 100;
+//  }else if(s === "cm"){
+//    return n * 10;
+//  }
+// };
+
+// console.log(convertToMm(1, 'km'));    // 1000000
+// console.log(convertToMm(54, 'km'));   // 54000000
+// console.log(convertToMm(2, 'cm'));    // 20
+
+
+//数の比較
+// 整数の入力値aとbを比較し大きい方の値を出力するcompareNumbers()関数を作成してください．a と b が等しい場合はeqと出力して下さい．
+
+// function compareNumbers(a, b) {
+//  if(a > b){
+//    return a;
+// }else if(a < b){
+//    return b;
+// }else if(a = b){
+//    return "eq";
+// }};
+// console.log(compareNumbers(2, 5)); // 5
+// console.log(compareNumbers(10, 9)); // 10
+// console.log(compareNumbers(2, 2)); // eq
+  
+  
+// //例題
+// 長方形の長辺a(mm，自然数)と短辺b(mm，自然数)が入力されると面積(mm2，自然数)を出力する関数calculateArea()関数を作成してください．
+
+// 入力される値（a, b）は必ず自然数であるものとし，自然数以外の値が入力される場合を考慮する必要はない（以降の問題でも同様）．
+
+// function calculateArea(a,b){
+//   return a * b;
+// }
+// console.log(calculateArea(2,5));//10
+// console.log(calculateArea(2,5));//10
+</script>
+</body>
+</html>
